@@ -61,7 +61,6 @@ func httpGet(rurl string) string {
 func runY(ii string,file1 *os.File,proxy string) {
 	sibada:
 	for {
-		//var wg sync.WaitGroup
 		time.Sleep(5 * time.Second)
 		timeChan := time.NewTimer(120 * time.Second)
 		fmt.Println("timer go")
