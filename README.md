@@ -1,0 +1,3 @@
+# pmonitor
+
+monitor child process output and then do something to kill or ...
