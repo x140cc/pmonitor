@@ -115,7 +115,7 @@ func runY(ii string,file1 *os.File,proxy string) {
 
 func main() {
 	flag.Parse()
-	file2, err := os.OpenFile("/home/cc/weblog.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	file2, err := os.OpenFile("/weblog.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalln("Failed to open log file", "os", ":", err)
 	}
