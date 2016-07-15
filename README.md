@@ -1,3 +1,3 @@
 # pmonitor
+A process monitor for my QQMail REP project.
 
-monitor child process output and then do something to kill or ...
