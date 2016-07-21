@@ -27,6 +27,7 @@ const (
 
 var coder = base64.NewEncoding(base64Table)
 var e = flag.String("e", "email@email.email", "email-address")
+var f = flag.String("f", "404@bad.name", "email-address")
 func base64Encode(src []byte) []byte {
 	dst := coder.EncodeToString(src)
 	dst = strings.Replace(dst, "+", "-", -1)
@@ -65,7 +66,7 @@ func runY(ii string,file1 *os.File,proxy string) {
 		timeChan := time.NewTimer(120 * time.Second)
 		fmt.Println("timer go")
 		chg := make(chan int,1)
-		cmd := exec.Command("./qq","-proxy="+proxy)
+		cmd := exec.Command("./qq","-proxy="+proxy,"-f="+*f)
 		stdout, err := cmd.StdoutPipe()
 		if err != nil {
 			fmt.Println("stdout pipe err")
