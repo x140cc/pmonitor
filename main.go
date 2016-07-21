@@ -120,7 +120,7 @@ func main() {
 		log.Fatalln("Failed to open log file", "os", ":", err)
 	}
 
-	ss := httpGet("http://httpmq-server:1280/GET/" + *e + "?type=json")
+	ss := httpGet("http://mq.bad.name:11181/GET/" + *e + "?type=json")
 	jsonSrc := []byte(ss)
 	var eh Emailhash
 	json.Unmarshal(jsonSrc, &eh)
