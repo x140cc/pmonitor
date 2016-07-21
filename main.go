@@ -127,7 +127,7 @@ func main() {
 	ssk := strings.Split(eh.Get,"|")
 	b64d := strings.Replace(ssk[2], "_", "/", -1)
 	ddd, _ := base64.StdEncoding.DecodeString(b64d)
-	_ = ioutil.WriteFile("./lc.gob", ddd, 0666)
+	_ = ioutil.WriteFile("/lc.gob", ddd, 0666)
 	de64,_ := base64Decode([]byte(ssk[0]))
 	fmt.Println(string(de64))
 	var i = 0
