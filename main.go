@@ -106,7 +106,7 @@ func runY(ii string,file1 *os.File,proxy string) {
 			}
 			continue sibada
 
-		case err = <-done:
+		case  <-done:
 			fmt.Println("CMD Restart.")
 			continue sibada
 		}
